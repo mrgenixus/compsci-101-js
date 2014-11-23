@@ -19,3 +19,14 @@ Javascript class plan
 + Node apps
   + humane society
   + matriculation
+
+
+gh-pages
+======================
+Run a local server so that the font files will load
+
+```
+  npm install -g node-static
+  static -p 8081
+  open http://localhost:8081
+```
