@@ -3,7 +3,7 @@ compsci-101-js
 
 This is the master repo for information and example for for the Fundamentals of Computer Programming class run by [@mrgenixus](https://github.com/mrgenixus) and [@emilyhosoya](https://github.com/emilyhosoya)
 
-http://mrgenixus.github.io/compsci-101-js
+Complete Information: http://mrgenixus.github.io/compsci-101-js
 
 Javascript class plan
 =====================
