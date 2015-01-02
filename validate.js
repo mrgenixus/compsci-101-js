@@ -1,5 +1,7 @@
 (function(){
   var ERROR_ELEMENT_CLASS = 'error';
+  var PHONE_NUMBER = /^\d+\+\d{3}-\d{3}-\d{4}$/;
+  var EMAIL = /^[a-z][a-z\+-_\.]*@[a-z][a-z\+-_\.]+\.[a-z]{2,10}$/i
 
   var tools = {
     is_empty: function(value) {
@@ -8,6 +10,14 @@
 
     is_ben: function(value) {
       return value === 'Ben'
+    },
+
+    is_phone_number: function(valuve) {
+      return PHONE_NUMBER.test(value);
+    },
+
+    is_email: function(value) {
+      return EMAIL.test(value);
     }
   };
 
