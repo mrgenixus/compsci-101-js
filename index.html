@@ -1,0 +1,104 @@
+<doctype html/>
+<html>
+<head>
+	<title>Sign up form</title>
+	<style type="text/css">
+	body {
+		font-family: sans-serif;
+		background: #eee;
+		color: #444;
+	}
+
+	.container {
+		width:960px;
+		margin: 0 auto;
+	}
+	.form-row {
+		overflow: auto;
+
+	}
+	label {
+		width:250px;
+		margin-right: 10px;
+		text-align: right;
+		float: left;
+		line-height: 18px;
+		margin: 8px 10px;
+	}
+	input, textarea {
+		width:350px;
+		margin: 4px 0;
+		border-radius: 4px;
+		border:1px solid #aaa;
+	}
+	input {
+		height: 22px;
+
+	}
+	button[type=submit] {
+
+	}
+	input[required] {
+		border: 1px solid red;
+	}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>Sign Up!</h1>
+
+		<form>
+			<div class="form-row">
+				<label for="first_name">First name:</label>
+				<input type="text" name="first_name" required>
+			</div>
+			<div class="form-row">
+				<label for="last_name">Last name:</label>
+				<input type="text" name="last_name" required>
+			</div>
+			<div class="form-row">
+				<label for="phone_number">Phone number:</label>
+				<input type="text" name="phone_number">
+			</div>
+			<div class="form-row">
+				<label for="email">Email:</label>
+				<input type="text" name="email" required>
+			</div>
+			<div class="form-row">
+				<label for="password">Password:</label>
+				<input type="password" name="password" required>
+			</div>
+			<div class="form-row">
+				<label for="password_confirm">Confirm password:</label>
+				<input type="password" name="password_confirm" required>
+			</div>
+			<div class="form-row">
+				<label for="backstory">Backstory:</label>
+				<textarea name="backstory" rows="5"></textarea>
+			</div>
+			<div class="form-row">
+				<label for="favorite_author">Favorite author:</label>
+				<input type="text" name="favorite_author">
+			</div>
+			<div class="form-row">
+				<label for="profession">Profesion:</label>
+				<input type="text" name="profession" required>
+			</div>
+			<div class="form-row">
+				<label for="dream">Dream:</label>
+				<textarea name="dream" rows="5" required></textarea>
+			</div>
+			<div class="form-row">
+				<label></label>
+				<button type="submit">Submit</button>
+				<button type="reset">Clear</button>
+			</div>
+		</form>
+
+	</div>
+
+</body>
+</html>
