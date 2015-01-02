@@ -15,6 +15,10 @@ body {
 .form-row {
 	overflow: auto;
 }
+.required label::after {
+	content: "*";
+	color: #b22;
+}
 .error {
 	border: 1px solid #b22;
 	background: #fbb;
@@ -24,6 +28,9 @@ body {
 	margin-top: 12px;
 }
 
+form {
+	padding-bottom:30px;
+}
 label {
 	width:250px;
 	margin-right: 10px;
@@ -43,7 +50,7 @@ input {
 	height: 22px;
 }
 button {
-	background: #444;
+	background: #666;
 	border: 0 solid #888;
 	color: #fff;
 	border-radius: 6px;
@@ -52,7 +59,7 @@ button {
 	cursor: pointer;
 }
 button[type=submit] {
-	background: #008
+	background: #249
 }
 button:hover {
 	opacity: 0.8;
