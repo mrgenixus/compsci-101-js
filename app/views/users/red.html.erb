@@ -1,0 +1,17 @@
+<% content_for :header do %>
+  <style>
+    body {
+      background-color: red;
+    }
+
+    .white {
+      width: 940px;
+      margin: 28px auto;
+    }
+  </style>
+<% end %>
+
+<div class="white">
+  <%= @user.errors.full_messages.to_sentence %>
+</div>
+
