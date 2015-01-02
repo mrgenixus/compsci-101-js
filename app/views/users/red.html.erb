@@ -7,11 +7,13 @@
     .white {
       width: 940px;
       margin: 28px auto;
+      background-color: white;
     }
   </style>
 <% end %>
 
 <div class="white">
+  <h2>Errors:</h2>
   <%= @user.errors.full_messages.to_sentence %>
 </div>
 
