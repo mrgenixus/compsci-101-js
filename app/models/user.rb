@@ -18,7 +18,8 @@ class User
   validates_presence_of :dream
 
   validates_format_of :email, :with => /[a-z][a-z\+-_\.]*@[a-z][a-z\+-_\.]+\.[a-z]{2,10}/i
-  validates format: { :phone_number, :with => /(\+\d+-)?\d{3}-\d{3}-\d{4}/ }, :allow_blank => true
+  validates :phone_number, format: {
+    :with => /(\+\d+-)?\d{3}-\d{3}-\d{4}/ }, :allow_blank => true
 
 
   def initialize(attributes = {})
