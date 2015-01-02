@@ -94,6 +94,15 @@
       }
     }
 
+    if(validations['form']) {
+      validation = validations['form'].call(tools, form.elements);
+      if (validation !== true) {
+        valid = false;
+
+        message = 'Form Invalid: ' + validation.toString();
+        defer(prepend, [form, error_element(message)]);
+      }
+    }
     return valid;
   }
 
