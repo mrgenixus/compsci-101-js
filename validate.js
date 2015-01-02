@@ -1,6 +1,6 @@
 (function(){
   var ERROR_ELEMENT_CLASS = 'error';
-  var PHONE_NUMBER = /^\d+\+\d{3}-\d{3}-\d{4}$/;
+  var PHONE_NUMBER = /^(\+\d+-)?\d{3}-\d{3}-\d{4}$/;
   var EMAIL = /^[a-z][a-z\+-_\.]*@[a-z][a-z\+-_\.]+\.[a-z]{2,10}$/i
 
   var tools = {
