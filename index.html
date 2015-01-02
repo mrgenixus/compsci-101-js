@@ -1,63 +1,26 @@
-<doctype html/>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Sign up form</title>
-	<style type="text/css">
-	body {
-		font-family: sans-serif;
-		background: #eee;
-		color: #444;
-	}
-
-	.container {
-		width:960px;
-		margin: 0 auto;
-	}
-	.form-row {
-		overflow: auto;
-
-	}
-	label {
-		width:250px;
-		margin-right: 10px;
-		text-align: right;
-		float: left;
-		line-height: 18px;
-		margin: 8px 10px;
-	}
-	input, textarea {
-		width:350px;
-		margin: 4px 0;
-		border-radius: 4px;
-		border:1px solid #aaa;
-	}
-	input {
-		height: 22px;
-
-	}
-	button[type=submit] {
-
-	}
-	input[required] {
-		border: 1px solid red;
-	}
-
-
-	</style>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
 	<div class="container">
 
 		<h1>Sign Up!</h1>
 
-		<form>
+		<p>Fill in the required fields and click submit.</p>
+
+		<form method="post" action="">
 			<div class="form-row">
 				<label for="first_name">First name:</label>
-				<input type="text" name="first_name" required>
+				<input type="text" name="first_name" class="required">
 			</div>
 			<div class="form-row">
+				<div class="error">An error</div>
 				<label for="last_name">Last name:</label>
-				<input type="text" name="last_name" required>
+				<input type="text" name="last_name" class="required">
 			</div>
 			<div class="form-row">
 				<label for="phone_number">Phone number:</label>
@@ -65,15 +28,15 @@
 			</div>
 			<div class="form-row">
 				<label for="email">Email:</label>
-				<input type="text" name="email" required>
+				<input type="text" name="email" class="required">
 			</div>
 			<div class="form-row">
 				<label for="password">Password:</label>
-				<input type="password" name="password" required>
+				<input type="password" name="password" class="required">
 			</div>
 			<div class="form-row">
 				<label for="password_confirm">Confirm password:</label>
-				<input type="password" name="password_confirm" required>
+				<input type="password" name="password_confirm" class="required">
 			</div>
 			<div class="form-row">
 				<label for="backstory">Backstory:</label>
@@ -84,12 +47,12 @@
 				<input type="text" name="favorite_author">
 			</div>
 			<div class="form-row">
-				<label for="profession">Profesion:</label>
-				<input type="text" name="profession" required>
+				<label for="profession">Profession:</label>
+				<input type="text" name="profession" class="required">
 			</div>
 			<div class="form-row">
 				<label for="dream">Dream:</label>
-				<textarea name="dream" rows="5" required></textarea>
+				<textarea name="dream" rows="5" class="required"></textarea>
 			</div>
 			<div class="form-row">
 				<label></label>

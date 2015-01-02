@@ -1,0 +1,59 @@
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	color: #383838;
+	font-size: 14px;
+}
+
+.container {
+	width:920px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #eef6f0;
+	border-radius: 4px;
+	box-shadow:4px 4px 8px rgba(0,0,0,0.4);
+}
+.form-row {
+	overflow: auto;
+}
+.error {
+	border: 1px solid #b22;
+	background: #fbb;
+	border-radius: 4px;
+	padding: 0.5em;
+	color: #811;
+	margin-top: 12px;
+}
+
+label {
+	width:250px;
+	margin-right: 10px;
+	text-align: right;
+	float: left;
+	line-height: 18px;
+	margin: 8px 10px;
+}
+input, textarea {
+	width:350px;
+	margin: 4px 0;
+	border-radius: 4px;
+	border:1px solid #aaa;
+	font-size: 14px;
+}
+input {
+	height: 22px;
+}
+button {
+	background: #444;
+	border: 0 solid #888;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 16px;
+	padding: 0.5em 1em;
+	cursor: pointer;
+}
+button[type=submit] {
+	background: #008
+}
+button:hover {
+	opacity: 0.8;
+}
