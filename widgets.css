@@ -1,0 +1,39 @@
+.user-profile {
+  width: 410px;
+  height: 220px;
+  margin: 16px 0;
+  float:left;
+  border: 1px solid rgba(0, 0, 0, .3);
+  box-shadow: 4px 4px rgba(0, 0, 0, .3);
+  margin-right: 16px;
+}
+
+.user-profile .name {
+  clear: right;
+  float: right;
+  line-height: 30px;
+  width: 205px;
+}
+
+.user-profile > * {
+  margin-top: 16px;
+}
+
+.user-profile .avatar {
+  float:left;
+  width: 139px;
+  height: 139px;
+  padding: 16px;
+  margin: 16px;
+  background-color: #aaa4aa
+}
+
+.user-profile .email {
+  display: inline-block;
+  float: right;
+  line-height: 30px;
+  width: 205px;
+}
+.clearfix {
+  clear: both;
+}
