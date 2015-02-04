@@ -6,7 +6,7 @@
   padding: 32px 16px;
 }
 
-.main header {
+.main > header {
   border-bottom: 1px solid #333;
 }
 
@@ -18,4 +18,39 @@ body {
   background-color: #aaa4aa;
   color: #333;
   font-family: 'Open Sans', sans-serif
+}
+
+code {
+  display: block;
+  font-family: "Inconsolata", monospace;
+  white-space: pre;
+
+  background-color: #024;
+  background-color: #422;
+  background-color: #242;
+
+  background-color: #333;
+  color: #eee;
+  line-height: 18px;
+}
+
+hr {
+  border-style: solid none;
+  border-width: 0;
+  height: 1px;
+  margin: 16px 0;
+  background-color: #333;
+}
+
+.panes > div.pane {
+  display: none;
+}
+
+.panes > div.pane:target {
+  display: block;
+  z-index: 1;
+}
+
+a {
+  color: #333;
 }

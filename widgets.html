@@ -4,14 +4,14 @@
   <link rel="stylesheet" href='widgets.css'>
   <link rel="stylesheet" href='example-widgets.css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <section class="main">
     <header>
       <h2>User Profile Widget</h2>
     </header>
-    <div class="user-profile">
+    <div class="user-profile card">
       <img class="avatar" src="noun_21658_cc.svg">
       <div class="name">Mr. Kanye West</div>
       <a class="email" href="mailto:email@email.com">mrgenixus@gmail.com</a>
@@ -22,7 +22,271 @@
       <a class="email" href="mailto:email@email.com">email@email.com</a>
     </div>
     <div class="clearfix"></div>
+    <code>
+      &lt;div class="user-profile"&gt;
+        &lt;img class="avatar" src="noun_32516_cc.svg"&gt;
+        &lt;div class="name"&gt;Mr. Ben West&lt;/div&gt;
+        &lt;a class="email" href="mailto:email@email.com"&gt;email@email.com&lt;/a&gt;
+      &lt;/div&gt;
+    </code>
   </section>
 
+  <section class="main">
+    <header>
+      <h2>User Interest Lists</h2>
+    </header>
+    <div class="interests">
+      <h3>Interests</h3>
+      <dl>
+        <dt>Sports Team</dt>
+        <dd>My Favorite Sport Team</dd>
+        <dt>Color</dt>
+        <dd>Light purple</dd>
+      </dl>
+    </div>
+    <code>
+      &lt;div class="interests"&gt;
+        &lt;dl&gt;
+          &lt;dt&gt;Sports Team&lt;/dt&gt;
+          &lt;dd&gt;My Favorite Sport Team&lt;/dd&gt;
+          &lt;dt&gt;Color&lt;/dt&gt;
+          &lt;dd&gt;Light purple&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;/div&gt;
+    </code>
+    <hr>
+    <div class="interests">
+      <h3>Interests</h3>
+      <dl class="horizontal">
+        <dt>Sports Team</dt>
+        <dd>My Favorite Sport Team</dd>
+        <dt>Color</dt>
+        <dd>Blue. No, Green!</dd>
+      </dl>
+    </div>
+    <code>
+      &lt;div class="interests"&gt;
+        &lt;dl class="horizontal"&gt;
+          &lt;dt&gt;Sports Team&lt;/dt&gt;
+          &lt;dd&gt;My Favorite Sport Team&lt;/dd&gt;
+          &lt;dt&gt;Color&lt;/dt&gt;
+          &lt;dd&gt;Blue. No, Green!&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/div&gt;
+    </code>
+    <hr>
+    <div class="interests">
+      <h3>Interests</h3>
+      <table>
+        <tr>
+          <th class="row-header">Sports Team         </th><td>My Favorite Sports Team  </td>
+        </tr>
+        <tr>
+          <th class="row-header">Color               </th><td>Orange                   </td>
+        </tr>
+        <tr>
+          <th class="row-header">Snowcone Flavor     </th><td>Cherry                   </td>
+        </tr>
+        <tr>
+          <th class="row-header">Thing to take       </th><td>Luck                     </td>
+        </tr>
+        <tr>
+          <th class="row-header">Snowcone Flavor     </th><td>Grape                    </td>
+        </tr>
+        <tr>
+          <th class="row-header">Best Book           </th><td>To Kill a Mocking Bird   </td>
+        </tr>
+        <tr>
+          <th class="row-header">Movie               </th><td>The Civil War by Ken Burns</td>
+        </tr>
+      </table>
+    <code>
+      &lt;div class="interests"&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Sports Team         &lt;/th&gt;&lt;td&gt;My Favorite Sports Team  &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Color               &lt;/th&gt;&lt;td&gt;Orange                   &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Snowcone Flavor     &lt;/th&gt;&lt;td&gt;Cherry                   &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Thing to take       &lt;/th&gt;&lt;td&gt;Luck                     &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Snowcone Flavor     &lt;/th&gt;&lt;td&gt;Grape                    &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Best Book           &lt;/th&gt;&lt;td&gt;To Kill a Mocking Bird   &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th class="row-header"&gt;Movie               &lt;/th&gt;&lt;td&gt;The Civil War by Ken Burns&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    </code>
+
+  </section>
+  <section class="main">
+    <header>
+      <h2>User Interest Cards</h2>
+    </header>
+    <div class="interest card">
+      <h3>Sport Team</h3>
+      <h4>My Favorite Sport Team</h4>
+      <p>
+        I really like my favorite sports team.  They score so many goal-point-unit-baskets.
+        They always beat the opponents.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <code>
+      &lt;div class="interest card"&gt;
+        &lt;h3&gt;Sport Team&lt;/h3&gt;
+        &lt;h4&gt;My Favorite Sport Team&lt;/h4&gt;
+        &lt;p&gt;
+          I really like my favorite sports team.  They score so many goal-point-unit-baskets.
+          They always beat the opponents.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    </code>
+    <div class="interest card">
+      <header>
+        <h3>Sport Team</h3>
+        <h4>My Favorite Sport Team</h4>
+      </header>
+      <p>
+        I really like my favorite sports team.  They score so many goal-point-unit-baskets.
+        They always beat the opponents.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <code>
+    &lt;div class="interest card"&gt;
+      &lt;header&gt;
+        &lt;h3&gt;Sport Team&lt;/h3&gt;
+        &lt;h4&gt;My Favorite Sport Team&lt;/h4&gt;
+      &lt;/header&gt;
+      &lt;p&gt;
+        I really like my favorite sports team.  They score so many goal-point-unit-baskets.
+        They always beat the opponents.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    </code>
+    <div class="clearfix"></div>
+  </section>
+  <section class="main">
+    <header>
+      <h2>Friends/Followers List</h2>
+    </header>
+    <div class="user-profile-slip card">
+      <img class="avatar" src="noun_21658_cc.svg">
+      <div class="name">Mr. Kanye West</div>
+      <a class="email" href="mailto:email@email.com">mrgenixus@gmail.com</a>
+    </div>
+    <div class="user-profile-slip card">
+      <img class="avatar" src="noun_21658_cc.svg">
+      <div class="name">Mr. Kanye West</div>
+      <a class="email" href="mailto:email@email.com">mrgenixus@gmail.com</a>
+    </div>
+    <div class="clearfix"></div>
+    <code>
+      &lt;div class="user-profile-slip card"&gt;
+        &lt;img class="avatar" src="noun_21658_cc.svg"&gt;
+        &lt;div class="name"&gt;Mr. Kanye West&lt;/div&gt;
+        &lt;a class="email" href="mailto:email@email.com"&gt;mrgenixus@gmail.com&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="user-profile-slip card"&gt;
+        &lt;img class="avatar" src="noun_21658_cc.svg"&gt;
+        &lt;div class="name"&gt;Mr. Kanye West&lt;/div&gt;
+        &lt;a class="email" href="mailto:email@email.com"&gt;mrgenixus@gmail.com&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="clearfix"&gt;&lt;/div&gt;
+    </code>
+    <hr>
+    <div class="user-profile-slip">
+      <img class="avatar" src="noun_32516_cc.svg">
+      <div class="name">Mr. Ben West</div>
+      <a class="email" href="mailto:email@email.com">email@email.com</a>
+    </div>
+    <div class="user-profile-slip">
+      <img class="avatar" src="noun_32516_cc.svg">
+      <div class="name">Mr. Ben West</div>
+      <a class="email" href="mailto:email@email.com">email@email.com</a>
+    </div>
+    <div class="clearfix"></div>
+    <code>
+      &lt;div class="user-profile-slip"&gt;
+        &lt;img class="avatar" src="noun_32516_cc.svg"&gt;
+        &lt;div class="name"&gt;Mr. Ben West&lt;/div&gt;
+        &lt;a class="email" href="mailto:email@email.com"&gt;email@email.com&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="user-profile-slip"&gt;
+        &lt;img class="avatar" src="noun_32516_cc.svg"&gt;
+        &lt;div class="name"&gt;Mr. Ben West&lt;/div&gt;
+        &lt;a class="email" href="mailto:email@email.com"&gt;email@email.com&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="clearfix"&gt;&lt;/div&gt;
+    </code>
+  </section>
+  <section class="main">
+    <header>
+      <h2>Tabs</h2>
+    </header>
+    <div class="tab-module">
+      <div class="tabs">
+        <a href="#profile">Profile</a>
+        <a href="#interests">Interests</a>
+        <a href="#friends">Friends/Followers</a>
+      </div>
+      <div class="panes">
+        <div id="profile"><!-- NOTE: no 'class="pane"' on default tab -->
+          <h3>Profile</h3>
+        </div>
+        <div class="pane" id="interests">
+          <h3>Interests</h3>
+          Irony butcher leggings mixtape. Salvia brunch distillery listicle pork belly butcher. Cred letterpress dreamcatcher street art cold-pressed, skateboard aesthetic heirloom before they sold out trust fund. Helvetica viral paleo, YOLO pug bicycle rights selfies literally messenger bag pork belly organic. Seitan letterpress Etsy tofu hashtag, try-hard jean shorts. Truffaut Intelligentsia irony Portland viral aesthetic cornhole, letterpress squid occupy Pitchfork kogi jean shorts fanny pack. Beard slow-carb actually fap photo booth, health goth banh mi Kickstarter umami Pinterest normcore McSweeney's next level Tumblr blog.<br><br>
+
+Aesthetic Godard High Life semiotics normcore. Hashtag swag bitters Brooklyn, direct trade post-ironic retro polaroid selvage synth drinking vinegar roof party Portland Pinterest. Cronut shabby chic Bushwick gentrify, post-ironic Pinterest yr you probably haven't heard of them Schlitz cornhole church-key keytar. Synth freegan Brooklyn forage, keffiyeh taxidermy master cleanse ethical narwhal Kickstarter selvage tote bag crucifix food truck chambray. Small batch Pitchfork stumptown tousled yr. Vice tattooed cronut crucifix meh 3 wolf moon. Try-hard four loko chia cred blog.<br><br>
+
+Locavore authentic mlkshk, quinoa Brooklyn mixtape meditation aesthetic Austin heirloom pickled Tumblr Helvetica leggings yr. Etsy viral keytar, Echo Park Thundercats readymade tousled paleo. Ugh +1 hella, fanny pack Vice swag readymade cred gluten-free. Stumptown lomo Pitchfork typewriter, Odd Future locavore mustache. Seitan pop-up gastropub photo booth Godard you probably haven't heard of them leggings slow-carb Odd Future banjo hoodie, High Life Carles meh normcore. Single-origin coffee chambray next level, forage +1 deep v meggings freegan trust fund four loko pop-up XOXO. Kogi keffiyeh letterpress vinyl selvage.
+        </div>
+        <div class="pane scroll" id="friends">
+          <h3>Friends/Followers</h3>
+          Irony butcher leggings mixtape. Salvia brunch distillery listicle pork belly butcher. Cred letterpress dreamcatcher street art cold-pressed, skateboard aesthetic heirloom before they sold out trust fund. Helvetica viral paleo, YOLO pug bicycle rights selfies literally messenger bag pork belly organic. Seitan letterpress Etsy tofu hashtag, try-hard jean shorts. Truffaut Intelligentsia irony Portland viral aesthetic cornhole, letterpress squid occupy Pitchfork kogi jean shorts fanny pack. Beard slow-carb actually fap photo booth, health goth banh mi Kickstarter umami Pinterest normcore McSweeney's next level Tumblr blog.<br><br>
+
+Aesthetic Godard High Life semiotics normcore. Hashtag swag bitters Brooklyn, direct trade post-ironic retro polaroid selvage synth drinking vinegar roof party Portland Pinterest. Cronut shabby chic Bushwick gentrify, post-ironic Pinterest yr you probably haven't heard of them Schlitz cornhole church-key keytar. Synth freegan Brooklyn forage, keffiyeh taxidermy master cleanse ethical narwhal Kickstarter selvage tote bag crucifix food truck chambray. Small batch Pitchfork stumptown tousled yr. Vice tattooed cronut crucifix meh 3 wolf moon. Try-hard four loko chia cred blog.<br><br>
+
+Locavore authentic mlkshk, quinoa Brooklyn mixtape meditation aesthetic Austin heirloom pickled Tumblr Helvetica leggings yr. Etsy viral keytar, Echo Park Thundercats readymade tousled paleo. Ugh +1 hella, fanny pack Vice swag readymade cred gluten-free. Stumptown lomo Pitchfork typewriter, Odd Future locavore mustache. Seitan pop-up gastropub photo booth Godard you probably haven't heard of them leggings slow-carb Odd Future banjo hoodie, High Life Carles meh normcore. Single-origin coffee chambray next level, forage +1 deep v meggings freegan trust fund four loko pop-up XOXO. Kogi keffiyeh letterpress vinyl selvage.
+        </div>
+        <div class="pane" id="messages">
+        </div>
+      </div>
+    </div>
+    <code>
+      &lt;div class="tab-module"&gt;
+        &lt;div class="tabs"&gt;
+          &lt;a href="#profile"&gt;Profile&lt;/a&gt;
+          &lt;a href="#interests"&gt;Interests&lt;/a&gt;
+          &lt;a href="#friends"&gt;Friends/Followers&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="panes"&gt;
+          &lt;div id="profile"&gt;&lt;!-- NOTE: no &#x27;class="pane"&#x27; on default tab --&gt;
+            &lt;h3&gt;Profile&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="pane" id="interests"&gt;
+            &lt;h3&gt;Interests&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="pane scroll" id="friends"&gt;
+            &lt;h3&gt;Friends/Followers&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="pane" id="messages"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    </code>
+  </section>
 </body>
 </html>

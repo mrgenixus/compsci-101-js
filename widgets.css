@@ -1,11 +1,7 @@
+/*user-profile*/
 .user-profile {
-  width: 410px;
-  height: 220px;
+  height: 170px;
   margin: 16px 0;
-  float:left;
-  border: 1px solid rgba(0, 0, 0, .3);
-  box-shadow: 4px 4px rgba(0, 0, 0, .3);
-  margin-right: 16px;
 }
 
 .user-profile .name {
@@ -15,21 +11,16 @@
   width: 205px;
 }
 
-.user-profile > * {
-  margin-top: 16px;
-}
-
 .user-profile .avatar {
   float:left;
   width: 139px;
   height: 139px;
   padding: 16px;
-  margin: 16px;
   background-color: #aaa4aa
 }
 
 .user-profile .email {
-  display: inline-block;
+  display: block;
   float: right;
   line-height: 30px;
   width: 205px;
@@ -46,7 +37,151 @@
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
 }
+.user-profile-slip {
+  width: 378px;
+  margin: 16px 0;
+  height: 64px;
+}
 
+.user-profile-slip .name {
+  margin-left: 76px;
+  line-height: 30px;
+  width: 205px;
+}
+
+.user-profile-slip .avatar {
+  float:left;
+  width: 64px;
+  height: 64px;
+  background-color: #aaa4aa
+}
+
+.user-profile-slip .email {
+  display: block;
+  margin-left: 76px;
+  line-height: 30px;
+  width: 205px;
+}
+
+
+/* utility */
 .clearfix {
   clear: both;
 }
+
+.card {
+  width: 378px;
+  margin: 16px;
+  float: left;
+  border: 1px solid rgba(0, 0, 0, .3);
+  box-shadow: 4px 4px rgba(0, 0, 0, .3);
+  margin-right: 16px;
+  padding: 16px;
+}
+
+.card header {
+  margin: -16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #333;
+  color: #eee;
+}
+
+/* interests */
+.interests dl.horizontal {
+  clear: both;
+}
+
+.interests dl.horizontal dt{
+  float: left;
+  width: 160px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.interests dl.horizontal dd{
+  margin-left: 174px;
+}
+
+.interests table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  /*border-bottom: 1px solid #333;*/
+}
+.interests table td, .interests table th {
+ /* border-width: 0;
+  border-top-width: 1px;
+  border-color: #333;
+  border-style: solid;*/
+  padding: 0;
+  margin: 0;
+}
+
+.interests table th.row-header {
+  text-align: right;
+  width: 20%;
+  padding-right: 16px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+.interests table tr:nth-child(2n+0) {
+  background-color: #ccc;
+}
+
+/* tabs */
+.tab-module {
+  margin: 16px 0;
+}
+
+.tab-module .tabs a {
+  display: inline-block;
+  padding: 16px;
+  margin: 0px;
+  float:left;
+  border:1px solid black;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+}
+
+.tab-module .tabs a:first-of-type {
+  border-left-width: 1px;
+}
+
+.tab-module {
+  min-height: 394px;
+}
+
+.tab-module .panes {
+  clear: left;
+  position: relative;
+}
+
+.panes > div {
+  z-index: 0;
+  position: absolute;
+  background-color: #eee;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  border: 1px solid black;
+  min-height: 300px;
+
+  padding: 16px;
+}
+
+.panes > div.scroll {
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
