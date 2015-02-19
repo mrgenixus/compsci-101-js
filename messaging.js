@@ -1,8 +1,8 @@
 (function(dsl_export) {
   var rendering_callback;
   var live = false;
-  var pusher;
-  var Deferred = jquery.Deferred || function() {};
+  var pusher, channel;
+  var Deferred = jQuery.Deferred || function() {};
 
   function Message(author, avatar_field, body) {
     this.dfd = this.extractImage(avatar_field);
@@ -10,10 +10,11 @@
     this.body = body;
   }
 
+
   Message.prototype.extractImage = function(file_field) {
     var dfd = Deferred();
 
-    if (file_field.files.length) {
+    if (file_field && file_field.files && file_field.files.length) {
       var file = file_field.files[0];
       var file_reader = new FileReader();
       var _this = this;
@@ -47,8 +48,18 @@
     this.dfd.always.apply(this.dfd, arguments);
   };
 
+  Message.prototype.toJSON = function() {
+    return JSON.parse(JSON.stringify({
+      avatar_url: this.avatar_url,
+      author: this.author,
+      body: this.body
+    }));
+  };
+
   function render(message){
-    rendering_callback(message);
+    if (rendering_callback) {
+      rendering_callback(message);
+    }
   }
 
   function handle_new_message_event(message) {
@@ -56,8 +67,8 @@
   }
 
   function create_message(message) {
-    if(live) {
-      pusher.trigger('message', 'message', message);
+    if(live && channel && pusher) {
+      //post to heroku-hosted-server
     }
 
     handle_new_message_event(message);
@@ -70,13 +81,25 @@
 
     function new_message(author, avatar_field, body) {
       var message = new Message(author, avatar_field, body);
-      create_message(message);
+      message.done(function() {
+        create_message(message.toJSON());
+      });
     }
 
     function goLive() {
-      //initialize pusher
-      //set live to ttrue
+      pusher = new Pusher('012feed226050a90a1a9');
+      channel = pusher.subscribe('presence-message');
+      channel.bind('client-message', function(data) {
+        handle_new_message_event(data);
+      });
+      live = true;
     }
-    dsl_export({ render: render, new_message: new_message, goLive: goLive });
+
+    function stop() {
+      live = false;
+      pusher = null;
+    }
+
+    dsl_export({ render: render, new_message: new_message, goLive: goLive, stop: stop });
   })();
 })(function (a) { for (var b in a) { if (! a.hasOwnProperty(b)) { continue; } window[b] = a[b]; }});
