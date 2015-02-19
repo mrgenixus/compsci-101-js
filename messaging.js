@@ -68,7 +68,7 @@
 
   function create_message(message) {
     if(live && channel && pusher) {
-      //post to heroku-hosted-server
+      $.post('http://dojo-loveland-chapter-1.herokuapp.com/messages', {message: message});
     }
 
     handle_new_message_event(message);
@@ -88,10 +88,8 @@
 
     function goLive() {
       pusher = new Pusher('012feed226050a90a1a9');
-      channel = pusher.subscribe('presence-message');
-      channel.bind('client-message', function(data) {
-        handle_new_message_event(data);
-      });
+      channel = pusher.subscribe('message');
+      channel.bind('message', handle_new_message_event);
       live = true;
     }
 
