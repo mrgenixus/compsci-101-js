@@ -54,4 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :users, only: :create
+  resources :messages, only: :create
 end
