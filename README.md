@@ -1,7 +1,7 @@
 # Intent
-
+ Working with object data structures
 # Assignment
-
+  Create a message processing tool
 # DSL
 ## Posting a message
 ```
